@@ -41,7 +41,7 @@
 
     In a weak configuration of FTP, we can easily login with anonymous as username & password, i try on this box and that's works 
 
-    !(Untitled.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled.png](Untitled.png)
 
     After got login, we can enumerate all item was available in this box, we found a task.txt file which is likely used to answer the next question **Who wrote the task list?** to open this task.txt file first we need to download it to our machine with `get task.txt` command and open the file 
 
@@ -67,7 +67,7 @@
 
     To gaining shell via SSH, we must known two information, username & password. To find all username available, we can bruteforce and trying to login with wrong password, if the username is exist, the error message should notice that the password is wrong, first attempt i use the lin (the answer of previous question) as username and wrong password (123)
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%201.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%201.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%201.png](Untitled%201.png)
 
     Wrong password, indicating the username exist
 
@@ -79,7 +79,7 @@
 
     Because the file locks.txt itself not long enough, the time to bruteforce just about 5 second and finally we can find the password for gaining shell with SSH
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%202.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%202.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%202.png](Untitled%202.png)
 
 ## Exploitation
 
@@ -87,19 +87,19 @@
 
     After get the **username** & **password**, we can login and get shell via SSH service
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%203.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%203.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%203.png](Untitled%203.png)
 
     Get shell with SSH
 
     We can enumerate current working directory with simple linux command `pwd` and list all available files or directorys in current directory
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%204.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%204.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%204.png](Untitled%204.png)
 
     Enumerate user home directory
 
     `user.txt` likely containing flag which is to answer the question, so we can open it and copy the flag
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%205.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%205.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%205.png](Untitled%205.png)
 
     Get user flag
 
@@ -109,7 +109,7 @@
 
     Likely the location of root flag is in root directory, but we can't see this directory due to not enough the privilege, so we must escalate our privilege from user lin to root user. I will check all the privilege of the user using command `sudo -l`  and we get the tar is likely run under root privilege 
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%206.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%206.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%206.png](Untitled%206.png)
 
     /bin/tar run under root privilege
 
@@ -121,13 +121,13 @@
 
     After run that command, we get the root shell and list the root directory
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%207.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%207.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%207.png](Untitled%207.png)
 
     Root directory
 
     we can see just one file inside root directory, which likely contain the root flag, we open the file and booomm..we get the root flag
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%208.png](WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%208.png)
+    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled%208.png](Untitled%208.png)
 
     Get the root flag
 
