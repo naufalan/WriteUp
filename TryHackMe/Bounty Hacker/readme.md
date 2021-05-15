@@ -1,4 +1,4 @@
-# WriteUp : Simple CTF
+# Bounty Hacker
 
 ## Reconnaissance
 
