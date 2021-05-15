@@ -41,7 +41,7 @@
 
     In a weak configuration of FTP, we can easily login with anonymous as username & password, i try on this box and that's works 
 
-    ![WriteUp%20Simple%20CTF%20fe713a355de245218f4b3782f739e4b7/Untitled.png](Untitled.png)
+    !(Untitled.png)
 
     After got login, we can enumerate all item was available in this box, we found a task.txt file which is likely used to answer the next question **Who wrote the task list?** to open this task.txt file first we need to download it to our machine with `get task.txt` command and open the file 
 
