@@ -78,7 +78,7 @@
 
     ![img/Untitled%208.png](img/Untitled%208.png)
 
-    ![Ignite%2069f43a296ec64f249189e9d1cd66b0eb/Untitled%209.png](Ignite%2069f43a296ec64f249189e9d1cd66b0eb/Untitled%209.png)
+    ![img/Untitled%209.png](img/Untitled%209.png)
 
     Next we must upgrade our reverse shell from raw netcat to bash shell so the shell is more interactive using `Python` 
 
