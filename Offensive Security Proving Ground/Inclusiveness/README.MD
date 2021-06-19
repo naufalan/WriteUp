@@ -49,11 +49,11 @@
 
     ![img/Untitled%204.png](img/Untitled%204.png)
 
-    Then try to source code, we found is likely vuln with Local File Inclusion. Param `?lan` take an argument
+    Then try to open the source code, we found is likely vuln with Local File Inclusion. Param `?lang` take an argument
 
     ![img/Untitled%205.png](img/Untitled%205.png)
 
-    Try to change the parameter of `?lan` to `/etc/passwd`
+    Try to change the parameter of `?lang` to `/etc/passwd`
 
     ![img/Untitled%206.png](img/Untitled%206.png)
 
