@@ -6,7 +6,7 @@
 
 - **Nmap**
 
-    Start by find the open and run service on the machine
+    Start by find the open and running service on the machine
 
     ```bash
     nmap 192.168.145.14 -sS -p- -T3 -Pn                       
@@ -63,7 +63,7 @@
 
 ## Exploiting
 
-Try to get shell access with access the `php reverse shell` file that has been upload with `ftp` in `pub` directory leveragin the LFI vulnerability
+Try to get shell access with access the `php reverse shell` file that has been upload with `ftp` in `pub` directory leveraging the LFI vulnerability
 
 ![img/Untitled%207.png](img/Untitled%207.png)
 
