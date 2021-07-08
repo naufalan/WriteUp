@@ -53,9 +53,9 @@ Try to access the application
 
 Search in the internet for Nagios XI default credentials, we found default username is **nagiosadmin** and the password is **PASSW0RD**, try to login with that we found no lucky, the password is incorrect, try to login with password **user** no luck, then finally try to login with password **admin,** we can access the Nagios application.
 
-![Monitor%20438dc33fcd0744b18654374b8fc0d4e1/Untitled%202.png](Monitor%20438dc33fcd0744b18654374b8fc0d4e1/Untitled%202.png)
+![img/Untitled%202.png](img/Untitled%202.png)
 
-![Monitor%20438dc33fcd0744b18654374b8fc0d4e1/Untitled%203.png](Monitor%20438dc33fcd0744b18654374b8fc0d4e1/Untitled%203.png)
+![img/Untitled%203.png](img/Untitled%203.png)
 
 From now we can conclude the application credential is **nagiosadmin:admin,** Let's try to search known exploit for Nagios XI
 
