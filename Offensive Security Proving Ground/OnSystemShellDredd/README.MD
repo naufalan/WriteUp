@@ -1,6 +1,6 @@
 # OnSystemShellDredd
 
-![img/os.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/os.png)
+![img/os.png](img/os.png)
 
 Scan available port with **Nmap**
 
@@ -30,11 +30,11 @@ PORT   STATE SERVICE VERSION
 
 From the scan, we just got one open port `ftp` and likely allow **anonymous login** so let's try login as `anonymous` and listing available directory, we got nothing
 
-![img/Untitled.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/Untitled.png)
+![img/Untitled.png](img/Untitled.png)
 
 Maybe these directory is hidden ? so try listing again but add `-a` options to list all directory included the hidden directory
 
-![img/Untitled%201.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/Untitled%201.png)
+![img/Untitled%201.png](img/Untitled%201.png)
 
 We found `hannah` user directory that's contain ssh private key `id_rsa` . This **private key** will be useful for login with **SSH** as `hannah` user, so we will download that. But we don't know which port **SSH** used so let's scan again all available port (`-p-`) on target machine with **Nmap**
 
@@ -70,7 +70,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 Now we know the **SSH** port is use, so we can try to login as `hannah` . 
 
-![img/Untitled%202.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/Untitled%202.png)
+![img/Untitled%202.png](img/Untitled%202.png)
 
 Listing all available files and directories we got the **user flag**
 
@@ -82,16 +82,16 @@ hannah@ShellDredd:~$
 
 Next we wil use the **LinPeas** to enumerate all information about the machine to perform **escalate privilege**. Upload the **LinePeas** script from our attack machine to the target machine then run the script and save the result in a file
 
-![img/Untitled%203.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/Untitled%203.png)
+![img/Untitled%203.png](img/Untitled%203.png)
 
 Next we download the result file from the target machine and see the result
 
-![img/Untitled%204.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/Untitled%204.png)
+![img/Untitled%204.png](img/Untitled%204.png)
 
 The `mawk` and `cpulimit` can run under root privilege, but we can use cpulimit instead. In the [GTFOBins](https://gtfobins.github.io/gtfobins/cpulimit/#suid) we can see the command to get the root privilege
 
-![img/Untitled%205.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/Untitled%205.png)
+![img/Untitled%205.png](img/Untitled%205.png)
 
 Next we grab the root flag then finish the game.
 
-![img/Untitled%206.png](OnSystemShellDredd%2076f7e2ad496e4daea59e89b030e72a78/Untitled%206.png)
+![img/Untitled%206.png](img/Untitled%206.png)
